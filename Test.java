@@ -5,7 +5,7 @@ public class Test {
         PreparedStatement pstmt = null;
         try {
             Class.forName("oracle.jdbc.OracleDriver");
-            con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "sys as sysdba", "#ma09ni16#");
+            con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "sys as sysdba", MyPassword);
             
             String sql = "delete Student where rank > ?";
             pstmt = con.prepareStatement(sql);
